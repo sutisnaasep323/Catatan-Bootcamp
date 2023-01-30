@@ -1,0 +1,27 @@
+# Ini merupakan Submit Tugas 1 pada hari ke-1 yaitu Membuat Program kotlin Sederhana
+
+fun main() {
+    
+    val openAssignment = 9
+    val closedAssignment = 23
+    val now = 6
+   	val isOpen: Boolean
+    val message: String
+    
+    if (now >= openAssignment && now <= closedAssignment){
+        
+        message = "Please enter the assignment"
+        isOpen = true;
+        
+    } else {
+        
+        val cekHours = openAssignment - now
+        
+        message = "Sorry, not available as it's now $now AM\nPlease come back at least $cekHours hours from now"
+        isOpen = false;
+    }
+    
+    println("Assignment is Open = $isOpen")
+    println(message)
+    
+}
