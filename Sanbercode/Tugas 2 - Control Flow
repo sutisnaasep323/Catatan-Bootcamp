@@ -1,0 +1,55 @@
+
+/**
+ * Sanbercode - BOOTCAMP
+ * Asep Sutisna - Day 2
+ * Tugas 2 - Control Flow
+ */
+
+fun main() {
+    val openAssignment = 9
+    val closedAssignment = 23
+    val now = 16
+    val isOpen: Boolean
+    val message: String
+    
+    var assignment: Array<String>? = null
+    var name: String? = null
+    
+    name = "Asep Sutisna"
+    if (name != null){
+    	hello(name)    
+    }
+    
+    if (now >= openAssignment && now <= closedAssignment){
+        
+        message = "Please enter the Assignment"
+        isOpen = true;
+        
+    } else {
+        
+        val cekHours = openAssignment - now
+        
+        message = "Sorry, not available as it's now $now AM\nPlease come back at least $cekHours hours from now"
+        isOpen = false;
+    }
+    
+    println("Assignment is Open = $isOpen")
+    println(message)
+    
+    if (isOpen) {
+        println("is entering the task...\n")
+        assignment = arrayOf("Task 1 - Introduction", "Task 2 - Controlflow")
+    	
+        var totalTasks = assignment?.size
+        println("Total Task has Complated: $totalTasks")
+        
+        //Print Task/Assignment
+        for (tasks in assignment){
+        	println(tasks)
+    	}
+    }
+    
+}
+
+fun hello(name: String) = println("Welcome back $name in Assignment Sanbercode")
+
